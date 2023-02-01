@@ -15,6 +15,7 @@
 	<description>librarymanagementsystem project for Spring Boot</description>
 
 		<properties>
+			<sonar.projectKey>appasuamithsai_librarymanagementsystem</sonar.projectKey>
 			<sonar.organization>appasuamithsai</sonar.organization>
 			<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 		</properties>
@@ -138,16 +139,16 @@
 				<plugin>
 					<groupId>org.jacoco</groupId>
 					<artifactId>jacoco-maven-plugin</artifactId>
+					<version>0.8.4</version>
 					<executions>
 						<execution>
-							<id>jacoco-initialize</id>
 							<goals>
 								<goal>prepare-agent</goal>
 							</goals>
 						</execution>
 						<execution>
-							<id>jacoco-site</id>
-							<phase>package</phase>
+							<id>report</id>
+							<phase>prepare-package</phase>
 							<goals>
 								<goal>report</goal>
 							</goals>
